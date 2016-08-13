@@ -13,9 +13,9 @@ including CloudWatch, SNS, and S3. The modules are:
   metrics (e.g. CPU usage, memory usage, disk space usage, latency, etc.) that you can add to Auto Scaling Groups, EC2
   instances, Elastic Load Balancers, and other resources.
 * [logs](/modules/logs): Modules that help with log aggregation in
-  [CloudWatch Logs](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) and
+  [CloudWatch Logs](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html),
   [access logging](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/access-log-collection.html)
-  for your Elastic Load Balancers.
+  for your Elastic Load Balancers, and log rotation and rate limiting for syslog.
 * [metrics](/modules/metrics): Modules that add custom metrics to
   [CloudWatch](https://aws.amazon.com/cloudwatch/), including metrics not visible to the EC2 hypervisor, such as
   memory usage and disk space usage.

@@ -13,6 +13,7 @@ This folder contains modules that help with logging:
   configure the CloudWatch Logs Agent.
 * [elb-access-logs](./elb-access-logs): Creates an S3 bucket to store ELB access logs, along with the
   appropriate access policy and lifecycle rules.
+* [syslog](./syslog): Configures rate limiting and log rotation for syslog.
 
 Click on each module above to see its documentation. Head over to the [examples folder](/examples) for examples.
 
