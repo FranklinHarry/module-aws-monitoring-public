@@ -6,12 +6,12 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 # Syslog Module
 
 This module contains a script called `configure-syslog` that allows you to configure rate limiting and log rotation
-settings syslog.
+settings for syslog.
 
 Note that this module currently only supports:
 
-* Operating systems: Ubuntu, Amazon Linux
-* Syslog flavors: rsyslog
+* **Operating systems:** Ubuntu, Amazon Linux
+* **Syslog flavors:** rsyslog
 
 ## What is syslog and rsyslog?
 
@@ -47,10 +47,16 @@ if it sees more than 200 messages over a 5 second interval. This may be too smal
 web services, so this module allows you to configure a higher limit so you don't lose log messages whenever traffic
 increases.
 
-This module increases the rate limit to 5000 messages over a 5 second interval. You can use the `--rate-limit-interval`
+This module increases the rate limit to 5,000 messages over a 5-second interval. You can use the `--rate-limit-interval`
 and `--rate-limit-burst` flags to configure an even higher limit, or disable rate limiting entirely by setting
 `--rate-limit-interval` to 0. Note: disabling rate limiting carries a small amount of risk, as logging can take up a
 lot of CPU and disk space.
+
+For example, to set the rate limit to 2,500 messages over a 3-second interval, you could use the following command:
+
+```
+gruntwork-install --module-name logs/syslog --repo https://github.com/gruntwork-io/module-aws-monitoring --tag v0.0.9 --rate-limit-interval 3 --rate-limit-burst 2500
+```
 
 #### Log rotation
 
