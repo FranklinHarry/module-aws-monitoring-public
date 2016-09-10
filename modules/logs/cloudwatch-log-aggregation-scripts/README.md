@@ -63,6 +63,13 @@ Data](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html#user-dat
 /etc/user-data/cloudwatch-log-aggregation/run-cloudwatch-logs-agent.sh --vpc-name prod
 ```
 
+By default, this will send all the logs in syslog to CloudWatch. If you want to send other log files too, you can
+use the `--extra-log-file` parameter one or more times:
+
+```
+/etc/user-data/cloudwatch-log-aggregation/run-cloudwatch-logs-agent.sh --vpc-name prod --extra-log-file nginx-errors=/var/log/nginx/nginx_error.log
+```
+
 #### Add IAM permissions to your EC2 instances
 
 Your EC2 instances need an [IAM policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) that
