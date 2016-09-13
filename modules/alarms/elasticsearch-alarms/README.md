@@ -1,16 +1,19 @@
 **Note**: This public repo contains the documentation for the private GitHub repo <https://github.com/gruntwork-io/module-aws-monitoring>.
 We publish the documentation publicly so it turns up in online searches, but to see the source code, you must be a Gruntwork customer.
-If you're already a Gruntwork customer, the original source for this file is at: <https://github.com/gruntwork-io/module-aws-monitoring/blob/master/modules/alarms/elasticache-redis-alarms/README.md>.
+If you're already a Gruntwork customer, the original source for this file is at: <https://github.com/gruntwork-io/module-aws-monitoring/blob/master/modules/alarms/elasticsearch-alarms/README.md>.
 If you're not a customer, contact us at <info@gruntwork.io> or <http://www.gruntwork.io> for info on how to get access!
 
-# ElastiCache Redis Alarms Module
+# Elasticsearch Alarms Module
 
-This module adds alarms for metrics produced by an [ElastiCache Cluster](https://aws.amazon.com/elasticache/) that is
-running [redis](http://redis.io/). These alarms will go off if the CPU usage or memory usage gets too high.
+This module adds alarms for metrics produced by an [Amazon Elasticsearch
+Cluster](https://aws.amazon.com/elasticsearch-service/). These alarms will go off if the CPU usage or heap usage gets
+too high, storage space gets too low, or the cluster goes into yellow or red status (see [Managing Amazon Elasticsearch
+Service Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html) for
+more info).
 
 ## How do you use this module?
 
-Check out the [examples/elasticache-alarms example](/examples/elasticache-alarms).
+Check out the [examples/elasticsearch-alarms example](/examples/elasticsearch-alarms).
 
 ## How do I get notifications from these alarms?
 
