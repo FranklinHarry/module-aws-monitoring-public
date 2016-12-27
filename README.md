@@ -5,7 +5,7 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 # AWS Monitoring Modules
 
-This repo contains modules for configure monitoring, log aggregation, and alerting using services built-into AWS,
+This repo contains modules for configure monitoring, log aggregation, and alerting using services built-in to AWS,
 including CloudWatch, SNS, and S3. The modules are:
 
 * [alarms](/modules/alarms): A collection of [CloudWatch
