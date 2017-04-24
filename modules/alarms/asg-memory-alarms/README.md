@@ -5,7 +5,7 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 # Auto Scaling Group Memory Alarms Module
 
-This module can be used to create CloudWatch alarms that go off if the memory usage gets too high in the EC2 instances
+This module can be used to create CloudWatch alarms that go off if the memory usage gets too high in the EC2 Instances
 you have in an Auto Scaling Group (ASG).
 
 ## How do you use this module

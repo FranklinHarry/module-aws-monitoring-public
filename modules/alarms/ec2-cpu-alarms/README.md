@@ -5,7 +5,7 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 # EC2 Instance CPU Alarms Module
 
-This module can be used to create CloudWatch alarms that go off if the CPU usage on an EC2 instance gets too high.
+This module can be used to create CloudWatch alarms that go off if the CPU usage on an EC2 Instance gets too high.
 
 ## How do you use this module
 

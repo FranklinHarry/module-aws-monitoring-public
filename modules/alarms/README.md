@@ -13,9 +13,9 @@ email or SMS you when something is going wrong. The modules are:
 * [asg-disk-alarms](./asg-disk-alarms): An alarm that goes off if disk usage in an Auto Scaling Group (ASG) is too high.
 * [asg-memory-alarms](./asg-memory-alarms): An alarm that goes off if memory usage in an Auto Scaling Group (ASG) is
   too high.
-* [ec2-cpu-alarms](./ec2-cpu-alarms): An alarm that goes off if CPU usage for an EC2 instance is too high.
-* [ec2-disk-alarms](./ec2-disk-alarms): An alarm that goes off if disk usage for an EC2 instance is too high.
-* [ec2-memory-alarms](./ec2-memory-alarms): An alarm that goes off if memory usage for an EC2 instance is too high.
+* [ec2-cpu-alarms](./ec2-cpu-alarms): An alarm that goes off if CPU usage for an EC2 Instance is too high.
+* [ec2-disk-alarms](./ec2-disk-alarms): An alarm that goes off if disk usage for an EC2 Instance is too high.
+* [ec2-memory-alarms](./ec2-memory-alarms): An alarm that goes off if memory usage for an EC2 Instance is too high.
 * [ecs-cluster-alamrs](./ecs-cluster-alarms): Alarms for an ECS cluster that go off if CPU or memory usage is too high
   across the cluster.
 * [ecs-service-alamrs](./ecs-cluster-alarms): Alarms for an ECS service that go off if CPU or memory usage is too high

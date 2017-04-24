@@ -5,11 +5,11 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 # CloudWatch Memory and Disk Metrics Scripts
 
-By default, CloudWatch does not provide memory and disk usage metrics for your EC2 instances. This is because EC2
+By default, CloudWatch does not provide memory and disk usage metrics for your EC2 Instances. This is because EC2
 instances are VMs and CloudWatch only has metrics from the hypervisor, which cannot see the memory and disk usage
 metrics inside a running VM. To fill in this gap, Amazon provides the [CloudWatch Monitoring
 Scripts](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/mon-scripts.html) which you can run directly
-on your EC2 instances. This module installs these scripts for you and configures them to run in a cron job so you get
+on your EC2 Instances. This module installs these scripts for you and configures them to run in a cron job so you get
 regular reporting of memory and disk usage metrics.
 
 Note, this module only supports the following Linux flavors:
@@ -20,19 +20,19 @@ Note, this module only supports the following Linux flavors:
 
 ## Example
 
-See the [cloudwatch-custom-metrics example](/examples/cloudwatch-custom-metrics) for an example of how to use this 
+See the [cloudwatch-custom-metrics example](/examples/cloudwatch-custom-metrics) for an example of how to use this
 module.
 
 ## Setting up memory and disk metrics in CloudWatch
 
 To get memory and disk metrics in CloudWatch, you need to:
 
-1. Install the CloudWatch Monitoring Scripts on your EC2 instance
-2. Add IAM permissions to your EC2 instances
+1. Install the CloudWatch Monitoring Scripts on your EC2 Instance
+2. Add IAM permissions to your EC2 Instances
 
 Both of these steps are described next.
 
-#### Install the CloudWatch Monitoring Scripts on your EC2 instance
+#### Install the CloudWatch Monitoring Scripts on your EC2 Instance
 
 To install the CloudWatch Monitoring Scripts, you need to run `install-cloudwatch-monitoring-scripts.sh`. Note that
 this can be handled for you automatically using the
@@ -61,9 +61,9 @@ memory metrics, you would run:
 gruntwork-install --module-name `cloudwatch-memory-disk-metrics` --module-param cron-schedule "0 * * * *" --module-param metrics-to-monitor "--disk-path='/foo' --disk-space-util --mem-util --mem-used --mem-avail"
 ```
 
-#### Add IAM permissions to your EC2 instances
+#### Add IAM permissions to your EC2 Instances
 
-Your EC2 instances need an [IAM policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) that
+Your EC2 Instances need an [IAM policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) that
 allows them to [read and write CloudWatch
 metrics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/mon-scripts.html#d0e19889). The
 [cloudwatch-custom-metrics-iam-policy module](../cloudwatch-custom-metrics-iam-policy) can add this policy for you

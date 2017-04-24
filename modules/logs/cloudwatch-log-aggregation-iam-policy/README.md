@@ -7,9 +7,9 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 This module contains Terraform templates that define an [IAM
 policy](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/QuickStartEC2Instance.html#d0e22325) required
-for CloudWatch Logging. You can attach this IAM policy to any EC2 instances that need to send their logs to CloudWatch.
+for CloudWatch Logging. You can attach this IAM policy to any EC2 Instances that need to send their logs to CloudWatch.
 See the [cloudwatch-log-aggregation-scripts module](../cloudwatch-log-aggregation-scripts) for scripts you can use to
-configure your EC2 instances to do CloudWatch Log Aggregation.
+configure your EC2 Instances to do CloudWatch Log Aggregation.
 
 ## Example
 
@@ -20,25 +20,25 @@ module.
 
 To set up CloudWatch Log Aggregation, you need to do two things:
 
-1. Run the CloudWatch Logs Agent on your EC2 instances
-2. Provide your EC2 instances with an IAM policy
+1. Run the CloudWatch Logs Agent on your EC2 Instances
+2. Provide your EC2 Instances with an IAM policy
 
 Both are described next.
 
-#### Run the CloudWatch Logs Agent on your EC2 instances
+#### Run the CloudWatch Logs Agent on your EC2 Instances
 
 To send log information to CloudWatch, you should use the [CloudWatch Logs
 Agent](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/QuickStartEC2Instance.html). The best way to
-install it on your EC2 instances is to use the [cloudwatch-log-aggregation-scripts
+install it on your EC2 Instances is to use the [cloudwatch-log-aggregation-scripts
 module](../cloudwatch-log-aggregation-scripts), which have scripts for installing and running the CloudWatch Logs
 Agent.
 
-#### Provide your EC2 instances with an IAM policy
+#### Provide your EC2 Instances with an IAM policy
 
-To allow your EC2 instances to talk to CloudWatch Logs, you need the right IAM policy. The Terraform templates in this
+To allow your EC2 Instances to talk to CloudWatch Logs, you need the right IAM policy. The Terraform templates in this
 module create this policy up for you. You just need to use an
 [aws_iam_policy_attachment](https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html) to attach that
-policy to the IAM roles of your EC2 instances.
+policy to the IAM roles of your EC2 Instances.
 
 ```hcl
 module "cloudwatch_log_aggregation" {

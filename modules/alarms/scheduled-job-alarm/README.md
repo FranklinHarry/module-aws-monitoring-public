@@ -10,7 +10,7 @@ time period. This is most useful for detecting if a scheduled job failed. For ex
 once per night, you could have the CRON job set a metric to the value "1" after each successful run and then use this
 module to trigger an alarm if the metric drops below the value "1" over a 24 hour period. This module works especially
 well with [ec2-snapper](https://github.com/josh-padnick/ec2-snapper), which you can run in a CRON job to automatically
-backup EC2 instances and write CloudWatch metrics.
+backup EC2 Instances and write CloudWatch metrics.
 
 ## Example
 

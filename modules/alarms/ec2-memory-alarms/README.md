@@ -5,7 +5,7 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 # EC2 Instance Memory Alarms Module
 
-This module can be used to create CloudWatch alarms that go off if the memory usage gets too high on an EC2 instance.
+This module can be used to create CloudWatch alarms that go off if the memory usage gets too high on an EC2 Instance.
 
 ## How do you use this module
 

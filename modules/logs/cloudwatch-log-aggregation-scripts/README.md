@@ -22,16 +22,16 @@ module.
 
 To set up log aggregation, you must do the following:
 
-1. Install the CloudWatch Logs Agent on your EC2 instances
-2. Run the CloudWatch Logs Agent on your EC2 instances
-3. Add IAM permissions to your EC2 instances
+1. Install the CloudWatch Logs Agent on your EC2 Instances
+2. Run the CloudWatch Logs Agent on your EC2 Instances
+3. Add IAM permissions to your EC2 Instances
 4. Configure your app to log to syslog
 
 All of these are described in detail next.
 
-#### Install the CloudWatch Logs Agent on your EC2 instances
+#### Install the CloudWatch Logs Agent on your EC2 Instances
 
-To install the CloudWatch Logs Agent on your EC2 instances, you need to:
+To install the CloudWatch Logs Agent on your EC2 Instances, you need to:
 
 1. Run `install-cloudwatch-logs-agent.sh` on each instance.
 2. Copy `run-cloudwatch-logs-agent.sh` to each instance.
@@ -46,10 +46,10 @@ gruntwork-install --module-name `cloudwatch-log-aggregation` --module-param aws-
 The best way to do these two steps is in a [Packer template](https://www.packer.io/). See the
 [cloudwatch-log-aggregation example](/examples/cloudwatch-log-aggregation) for an example.
 
-## Run the CloudWatch Logs Agent on your EC2 instances
+## Run the CloudWatch Logs Agent on your EC2 Instances
 
-When your EC2 instances are booting up, they should run the `run-cloudwatch-logs-agent.sh` script, which will configure
-and start the CloudWatch Logs Agent. The script supports three command line options: 
+When your EC2 Instances are booting up, they should run the `run-cloudwatch-logs-agent.sh` script, which will configure
+and start the CloudWatch Logs Agent. The script supports three command line options:
 
 * `--vpc-name`: The name of the current VPC (e.g. prod, stage). Required.
 * `--log-group-name`: The name to use for the log group. Optional. Default: `<vpc-name>-ec2-syslog`.
@@ -70,9 +70,9 @@ use the `--extra-log-file` parameter one or more times:
 /etc/user-data/cloudwatch-log-aggregation/run-cloudwatch-logs-agent.sh --vpc-name prod --extra-log-file nginx-errors=/var/log/nginx/nginx_error.log
 ```
 
-#### Add IAM permissions to your EC2 instances
+#### Add IAM permissions to your EC2 Instances
 
-Your EC2 instances need an [IAM policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) that
+Your EC2 Instances need an [IAM policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) that
 allows them to [write to CloudWatch
 Logs](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/QuickStartEC2Instance.html#d0e22325). The
 [cloudwatch-log-aggregation-iam-policy module](../cloudwatch-log-aggregation-iam-policy) can add this policy for you

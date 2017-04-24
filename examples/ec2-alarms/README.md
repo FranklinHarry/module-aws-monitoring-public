@@ -5,7 +5,7 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 # EC2 Alarms Example
 
-This is an example of how to set up alarms for individual EC2 instances (i.e., those not in an Auto Scaling Group)
+This is an example of how to set up alarms for individual EC2 Instances (i.e., those not in an Auto Scaling Group)
 using the following modules:
 
 * [ec2-cpu-alarms](/modules/alarms/ec2-cpu-alarms): An alarm that goes off if CPU usage is too high.

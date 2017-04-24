@@ -7,12 +7,12 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 This module contains Terraform templates that define an [IAM
 policy](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/QuickStartEC2Instance.html#d0e22325) required
-for reading and writing CloudWatch metrics. You can attach this IAM policy to any EC2 instances that need CloudWatch
+for reading and writing CloudWatch metrics. You can attach this IAM policy to any EC2 Instances that need CloudWatch
 metrics.
 
-Note: CloudWatch provides many metrics for your EC2 instances by default, but not memory and disk usage metrics. See the
+Note: CloudWatch provides many metrics for your EC2 Instances by default, but not memory and disk usage metrics. See the
 [cloudwatch-memory-disk-metrics-scripts module](../cloudwatch-memory-disk-metrics-scripts) for scripts you can use to
-configure your EC2 instances to report memory and disk usage metrics as well.
+configure your EC2 Instances to report memory and disk usage metrics as well.
 
 ## Example
 
@@ -23,7 +23,7 @@ module.
 
 The basic idea is to add the module to your Terraform templates and then to use an
 [aws_iam_policy_attachment](https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html) to attach the IAM
-policy to the IAM roles of your EC2 instances.
+policy to the IAM roles of your EC2 Instances.
 
 ```hcl
 module "cloudwatch_metrics" {

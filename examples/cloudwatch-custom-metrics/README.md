@@ -5,7 +5,7 @@ If you're not a customer, contact us at <info@gruntwork.io> or <http://www.grunt
 
 # CloudWatch Custom Metrics Example
 
-This is an example of how to set report custom metrics from an EC2 instance using the following modules:
+This is an example of how to set report custom metrics from an EC2 Instance using the following modules:
 
 * [cloudwatch-custom-metrics-iam-policy](/modules/metrics/cloudwatch-custom-metrics-iam-policy): A module that defines
   an IAM policy that allows reading/writing CloudWatch metrics.
