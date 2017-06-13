@@ -16,8 +16,8 @@ Note that this module currently only supports:
 ## What is syslog and rsyslog?
 
 [syslog](https://en.wikipedia.org/wiki/Syslog) is the standard logging system on Linux. Many Linux distributions,
-including Ubuntu and Amazon Linux, come with [rsyslog](http://www.rsyslog.com/) installed, which is a replacement for
-syslog that uses the same configuration and API, but has more advanced features (see [this StackOverflow
+including Ubuntu, CentOS, and Amazon Linux, come with [rsyslog](http://www.rsyslog.com/) installed, which is a 
+replacement for syslog that uses the same configuration and API, but has more advanced features (see [this StackOverflow
 thread](http://serverfault.com/a/692329/326638) for a discussion of the various syslog libraries).
 
 With syslog, you can log things using the `logger` command (e.g. `echo "hi" | logger`) and find the log files under

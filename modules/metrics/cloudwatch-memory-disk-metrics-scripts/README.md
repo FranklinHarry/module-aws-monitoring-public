@@ -16,7 +16,7 @@ Note, this module only supports the following Linux flavors:
 
 * Amazon Linux
 * Ubuntu
-* Red Hat Linux
+* CentOS / Red Hat Linux
 
 ## Example
 
