@@ -14,6 +14,7 @@ regular reporting of memory and disk usage metrics.
 
 Note, this module only supports the following Linux flavors:
 
+* Amazon Linux 2
 * Amazon Linux
 * Ubuntu
 * CentOS / Red Hat Linux
@@ -58,7 +59,7 @@ For example, to send metrics every hour on the utilization percentage of the pat
 memory metrics, you would run:
 
 ```bash
-gruntwork-install --module-name `cloudwatch-memory-disk-metrics` --module-param cron-schedule "0 * * * *" --module-param metrics-to-monitor "--disk-path='/foo' --disk-space-util --mem-util --mem-used --mem-avail"
+gruntwork-install --module-name cloudwatch-memory-disk-metrics --module-param 'cron-schedule="0 * * * *"' --module-param "metrics-to-monitor='--disk-path=/ --mem-util --disk-space-util --auto-scaling'"
 ```
 
 #### Add IAM permissions to your EC2 Instances

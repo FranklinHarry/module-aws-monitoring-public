@@ -10,7 +10,12 @@ settings for syslog.
 
 Note that this module currently only supports:
 
-* **Operating systems:** Ubuntu, Amazon Linux
+* **Operating systems:**
+  * Amazon Linux 2
+  * Amazon Linux
+  * Ubuntu
+  * CentOS / Red Hat Linux
+
 * **Syslog flavors:** rsyslog
 
 ## What is syslog and rsyslog?

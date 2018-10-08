@@ -33,8 +33,12 @@ module "load_balancer_access_logs_bucket" {
 }
 ```
 
-Note that, like all S3 buckets, the `s3_bucket_name` must be globally unique. Next, just add an `access_logs` block
-to your `aws_elb` or `aws_alb` definition:
+Important notes:
+
+* All S3 bucket names, including `s3_bucket_name`, must be *globally* unique across all AWS customers. 
+* If you're using an ELB/ALB, the `s3_logging_prefix` must match the name of the ELB/ALB in order for it to have access to the right S3 object. 
+
+Next, just add an `access_logs` block to your `aws_elb` or `aws_alb` definition:
 
 ```hcl
 # If using ELB...
